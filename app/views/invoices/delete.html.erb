@@ -1,0 +1,19 @@
+<% @page_title = "Delete Invoice" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div >
+  <h2>Delete Invoice</h2>
+
+  <%= form_for(:invoice, :url => {:action => 'destroy', :id => @invoice.id}) do |f| %>
+
+    <p>Are you sure you want to permanently delete this invoice?</p>
+
+    <p ><%= @invoice.name%></p>
+
+    <div >
+      <%= submit_tag("Delete Invoice") %>
+    </div>
+
+  <% end %>
+</div>

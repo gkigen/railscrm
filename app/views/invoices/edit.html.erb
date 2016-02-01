@@ -1,0 +1,17 @@
+<% @page_title = "Invoice" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}) %>
+
+<div >
+  <h2>Update Account</h2>
+
+  <%= form_for(:invoice, :url => {:action => 'update', :id => @invoice.id},:class => "form-horizontal center") do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div >
+      <%= submit_tag("Update Invoice") %>
+    </div>
+
+  <% end %>
+</div>

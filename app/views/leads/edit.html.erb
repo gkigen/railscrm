@@ -1,0 +1,17 @@
+<% @page_title = "Lead" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}) %>
+
+<div >
+  <h2>Update Lead</h2>
+
+  <%= form_for(:lead, :url => {:action => 'update', :id => @lead.id},:class => "form-horizontal center") do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div >
+      <%= submit_tag("Update Lead") %>
+    </div>
+
+  <% end %>
+</div>

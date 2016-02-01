@@ -1,0 +1,19 @@
+<% @page_title = " Account" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div >
+  <h2>Delete Lead</h2>
+
+  <%= form_for(:lead, :url => {:action => 'destroy', :id => @lead.id}) do |f| %>
+
+    <p>Are you sure you want to permanently delete this LEAD?</p>
+
+    <p ><%= @lead.company%></p>
+
+    <div >
+      <%= submit_tag("Delete Lead") %>
+    </div>
+
+  <% end %>
+</div>

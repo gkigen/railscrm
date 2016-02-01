@@ -1,0 +1,19 @@
+<% @page_title = "Delete Complaint" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div >
+  <h2>Delete complaint</h2>
+
+  <%= form_for(:complaint, :url => {:action => 'destroy', :id => @complaint.id}) do |f| %>
+
+    <p>Are you sure you want to permanently delete this complaint?</p>
+
+    <p ><%= @complaint.company%></p>
+
+    <div >
+      <%= submit_tag("Delete Complaint") %>
+    </div>
+
+  <% end %>
+</div>

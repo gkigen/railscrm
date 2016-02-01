@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crm</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+<h2>A web crm </>	
+  <ul class="nav nav-tabs">
+    <li><%= link_to("Accounts", {:controller => 'accounts', :action => 'index'}) %></li>
+    <li><%= link_to("Complaint", {:controller => 'complaints', :action => 'index'}) %></li>
+    <li><%= link_to("contacts", {:controller => 'contacts', :action => 'index'})%></li>
+    <li><%= link_to("invoices", {:controller => 'invoices', :action => 'index'}) %></li>
+    <li><%= link_to("leads", {:controller => 'leads', :action => 'index'}) %></li>
+    <li><%= link_to("opportunitys", {:controller => 'opportunitys', :action => 'index'}) %></li>
+    
+  </ul>
+
+<%= yield %>
+</div>
+</body>
+</html>

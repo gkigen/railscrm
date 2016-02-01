@@ -1,0 +1,39 @@
+<% @page_title = "Show Opportunitys" %>
+
+<%= link_to("<< Back to List", {:action => 'index'} ) %>
+
+<div >
+  <h2>Show Opportunitys</h2>
+
+  <table class="table table-striped table-bordered table-condensed" summary="Opportunitys detail view">
+    <tr>
+      <th>name</th>
+      <td><%= @opportunitie.name %></td>
+    </tr>
+    <tr>
+      <th>account</th>
+      <td><%= @opportunitie.account %></td>
+    </tr>
+    <tr>
+      <th>salesstage</th>
+      <td><%= @opportunitie.salesstage %></td>
+    </tr>
+    <tr>
+      <th>leadsource</th>
+      <td><%= @opportunitie.leadsource %></td>
+    </tr>
+    <tr>
+      <th>nextstep</th>
+      <td><%= @opportunitie.nextstep %></td>
+    </tr>
+    <tr>
+      <th>ammount</th>
+      <td><%= @opportunitie.ammount %></td>
+    </tr>
+    <tr>
+      <th>description</th>
+      <td><%= @opportunitie.description %></td>
+    </tr>
+  </table>
+
+</div>

@@ -1,0 +1,25 @@
+<% @page_title = "Show Complaint" %>
+
+<%= link_to("<< Back to List", {:action => 'index'} ) %>
+
+<div >
+  <h2>Show Complaint</h2>
+
+  <table class="table table-striped table-bordered table-condensed"summary="Complaint detail view">
+    <tr>
+      <th>company</th>
+      <td><%= @complaint.company %></td>
+    </tr>
+    <tr>
+      <th>address</th>
+      <td><%= @complaint.state %></td>
+    </tr>
+    <tr>
+      <th>mobile</th>
+      <td><%= @complaint.handledby %></td>
+    </tr>
+    
+    
+  </table>
+
+</div>

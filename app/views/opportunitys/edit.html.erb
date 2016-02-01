@@ -1,0 +1,17 @@
+<% @page_title = "Opportunitys" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}) %>
+
+<div >
+  <h2>Update Opportunitys</h2>
+
+  <%= form_for(:opportunitie, :url => {:action => 'update', :id => @opportunitie.id},:class => "form-horizontal center") do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div >
+      <%= submit_tag("Update Opportunitys") %>
+    </div>
+
+  <% end %>
+</div>

@@ -1,0 +1,17 @@
+<% @page_title = "Contact" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}) %>
+
+<div >
+  <h2>Update Contact</h2>
+
+  <%= form_for(:contact, :url => {:action => 'update', :id => @contact.id},:class => "form-horizontal center") do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div >
+      <%= submit_tag("Update contact") %>
+    </div>
+
+  <% end %>
+</div>

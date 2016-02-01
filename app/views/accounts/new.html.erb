@@ -1,0 +1,17 @@
+<% @page_title = "New Account" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div >
+  <h2>Create Account</h2>
+
+  <%= form_for(:account, :url => {:action => 'create'},:class => "form-horizontal center") do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div >
+      <%= submit_tag("Create Account") %>
+    </div>
+
+  <% end %>
+</div>

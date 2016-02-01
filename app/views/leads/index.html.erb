@@ -1,0 +1,42 @@
+<% @page_title = "Lead" %>
+
+<%= link_to("<< Back to Menu", {:controller => 'accounts', :action => 'index'}, :class => 'back-link') %>
+
+<div class="lead index">
+  <h2>Leads</h2>
+
+  <%= link_to(image_tag('plus_sign.png', :size => '11x11', :alt => '+') + " Add New Leads", {:action => 'new'}, :class => 'action new') %>
+
+  <div><%= pluralize(@leads.size, 'leads') %> found</div>
+  <table class="table table-striped table-bordered table-condensed" summary="Leads list">
+    <tr class="header">
+      <th>company</th>
+      <th>address</th>
+      <th>email</th>
+      <th>mobile</th>
+      <th>industry</th>
+      <th>leadsource</th>
+      <th>county</th>
+      <th>converted</th>
+      <th>Actions</th>
+    </tr>
+    <% @leads.each do |lead| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= lead.company %></td>
+      <td><%= lead.address %></td>
+      <td><%= lead.email %></td>
+      <td><%= lead.mobile %></td>
+      <td><%= lead.industry %></td>
+      <td><%= lead.leadsource %></td>
+      <td><%= lead.county %></td>
+       <td><%= lead.converted %></td>
+      <td class="actions">
+        
+        <%= link_to("Show", {:action => 'show', :id => lead.id}, :class => 'action show') %>
+        <%= link_to("Edit", {:action => 'edit', :id => lead.id}, :class => 'action edit') %>
+        <%= link_to("Delete", {:action => 'delete', :id => lead.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

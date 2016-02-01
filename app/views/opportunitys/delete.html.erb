@@ -1,0 +1,19 @@
+<% @page_title = "Delete Account" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div >
+  <h2>Delete Account</h2>
+
+  <%= form_for(:opportunitie, :url => {:action => 'destroy', :id => @opportunitie.id}) do |f| %>
+
+    <p>Are you sure you want to permanently delete this opportunitie?</p>
+
+    <p ><%= @opportunitie.name%></p>
+
+    <div >
+      <%= submit_tag("Delete opportunitie") %>
+    </div>
+
+  <% end %>
+</div>

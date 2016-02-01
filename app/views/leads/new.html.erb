@@ -1,0 +1,17 @@
+<% @page_title = "New Lead" %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div >
+  <h2>Create Lead</h2>
+
+  <%= form_for(:lead, :url => {:action => 'create'},:class => "form-horizontal center") do |f| %>
+
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+
+    <div >
+      <%= submit_tag("Create Lead") %>
+    </div>
+
+  <% end %>
+</div>
